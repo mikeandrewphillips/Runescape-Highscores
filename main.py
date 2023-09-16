@@ -10,4 +10,9 @@ def get_highscores(username):
     skill_dictionary = {k:v.split(",") for k,v in skill_dictionary.items()}
     return skill_dictionary
 
-print(json.dumps(get_highscores("PhysFighter")))
+def lambda_handler(event, context):
+    # TODO implement
+    return {
+        'statusCode': 200,
+        'body': json.dumps(get_highscores("PhysFighter"))
+    }
